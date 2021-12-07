@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-clr: #0052ff;
+    --secondary-clr: #fff;
+}
+
+body {
+    margin: 0;
+}
+
+/* Estos estilos corresponden al header */
+header .top-menu-container {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.116);
+}
+header .top-menu-container .buttons-container {
+    display: flex;
+}
+header .top-menu-container .logo img {
+    max-width: 112px;
+    height: 20px;
+    margin: 15px;
+}
+header .top-menu-container .get-started {
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 13px;
+    margin: 10px;
+    padding: 6px 12px;
+}
+header .drop-down-menu {
+    background-color: aquamarine;
+    height: 90vh;
+    display: grid;
+}
+header .hidden {
+    display: none;
+}
+header .show {
+    display: grid;
+}
