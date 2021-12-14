@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -9,10 +11,12 @@
 
 body {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Estos estilos corresponden al header */
 header .top-menu-container {
+    height: 55px;
     display: flex;
     justify-content: space-between;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.116);
@@ -36,9 +40,10 @@ header .top-menu-container .get-started {
     padding: 6px 12px;
 }
 header .drop-down-menu {
-    background-color: aquamarine;
-    height: 90vh;
-    display: grid;
+    background-color: var(--secondary-clr);
+    height: calc(100vh - 55px);
+    display: flex;
+    gap: 2rem;
 }
 header .hidden {
     display: none;
@@ -46,3 +51,112 @@ header .hidden {
 header .show {
     display: grid;
 }
+header .drop-down-menu nav ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1.75rem;
+    margin-top: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+header .drop-down-menu nav ul li a {
+    text-decoration: none;
+    color: rgb(5, 15, 25);
+}
+header .drop-down-menu .menu-buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1.75rem;
+}
+.btn-style {
+    padding: 1rem 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-style: none;
+    border-radius: 4px;
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+}
+header .drop-down-menu .menu-buttons-container button:nth-child(2) {
+    background-color: var(--secondary-clr);
+    border: 2px solid var(--primary-clr);
+    color: var(--primary-clr);
+}
+
+/* Estilos correspondientes a la primera sección */
+
+#welcome-section {
+    margin: 1.5rem;
+}
+#welcome-section .svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-clr);
+    font-weight: 600;
+}
+h2 {
+    font-size: 2.3rem;
+}
+p {
+    line-height: 1.5rem;
+}
+#welcome-section .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: .65rem;
+}
+#welcome-section .input-container input {
+    background-color: var(--secondary-clr);
+    border: 1.2px solid rgba(0, 0, 0, 0.14);
+    font-weight: 500;
+}
+#welcome-section .input-container input::placeholder {
+    padding-left: 1rem;
+}
+
+#create-section {
+    margin: 4rem 1.5rem;
+}
+#create-section .create-upper-container {
+    text-align: center;
+}
+img {
+    max-width: 100%;
+}
+#create-section .create-specifications-container {
+    display: flex;
+    flex-direction: column;
+    margin: 3.5rem 0;
+    gap: 1.5rem;
+}
+#create-section .create-specifications-container .create-specifications-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#create-section .create-specifications-container .create-specifications-items .icon-container {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#create-section .create-specifications-container .create-specifications-items .description-container h3 {
+    font-size: 1.4rem;
+}
+#create-section .create-specifications-container .create-specifications-items .description-container  p {
+    font-size: 1.1rem;
+    color: #5B616E;
+}
+
+
