@@ -42,8 +42,8 @@
   top: 50%;
   margin-top: -1.5px; }
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 30px;
-    height: 3.6px;
+    width: 20px;
+    height: 2px;
     background: linear-gradient(#292929, #060607c7);
     border-radius: 4px;
     position: absolute;
@@ -83,4 +83,4 @@
       top: 0;
       transform: rotate(-90deg);
       transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
-  
+    
