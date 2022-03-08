@@ -7,6 +7,7 @@
 :root {
     --primary-clr: #0052ff;
     --secondary-clr: #fff;
+    --gray-clr: #78797a;
 }
 
 body {
@@ -87,6 +88,49 @@ header .drop-down-menu .menu-buttons-container button:nth-child(2) {
     color: var(--primary-clr);
 }
 
+/* Ajustes responsive */
+@media(min-width: 1100px) {
+    header {
+        display: flex;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.116);
+        justify-content: space-between;
+    }
+    header .top-menu-container {
+        box-shadow: none;
+    }
+    header .top-menu-container .buttons-container {
+        display: none;
+    }
+    header .hidden {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+    }
+    header .hidden nav ul {
+        flex-direction: row;
+        height: auto;
+    }
+    header .hidden nav ul li {
+        margin: 0 .7rem;
+    }
+    header .hidden nav ul li a{
+        font-size: .95rem;
+    }
+    header .hidden .menu-buttons-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+        align-items: center;
+        height: 55px;
+        width: 250px;
+    }
+    .btn-style {
+        padding: .4rem;
+        font-size: .95rem;
+        height: 2.5rem;
+    }
+}
+
 /* Estilos correspondientes a la primera sección */
 
 #welcome-section {
@@ -159,4 +203,59 @@ img {
     color: #5B616E;
 }
 
+/* Estilos correspondientes a la segunda sección (crypto-chart) */
 
+#crypto-chart-section ul {
+    list-style: none;
+    padding: 0;
+    color: var(--gray-clr);
+    margin: 6rem auto;
+    border: solid rgba(0, 0, 0, .12) 1px;
+    max-width: 1100px;
+}
+#crypto-chart-section ul .table-heading {
+    padding: 1rem 2rem;
+}
+#crypto-chart-section .crypto-flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: .3rem 2rem;
+    border-bottom: solid rgba(0, 0, 0, .12) 1px;
+}
+#crypto-chart-section .crypto-flex-container:last-child {
+    border-bottom: none;
+}
+
+#crypto-chart-section .crypto-flex-container .crypto-flex-items {
+    flex: 1;
+    align-self: center;
+}
+
+#crypto-chart-section .crypto-flex-container .crypto-flex-2 {
+    flex: 2;
+}
+#crypto-chart-section .crypto-flex-container .crypto-div-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#crypto-chart-section .crypto-flex-container button {
+    background-color: #098551;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: .4rem 0;
+    font-size: .95rem;
+    font-weight: 600;
+}
+
+/* AJUSTES RESPONSIVE */
+
+@media (max-width: 885px) {
+    #crypto-chart-section ul .table-heading {
+        display: none;
+    }
+    .desaparecer {
+        display: none;
+    }
+}
